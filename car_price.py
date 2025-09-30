@@ -34,7 +34,7 @@ import pickle as pkl
 def model_pred(fuel_type,transmission_type,engine,seats):
     with open ("car_model.pkl",'rb') as file :
         reg_model = pkl.load(file)
-        input_features=[[2018,27000, fuel_type, transmission_type,20,engine, 15, seats]]
+        input_features=[[2,2018,1,2700, fuel_type, transmission_type,20,engine,50, seats]]
         return reg_model.predict(input_features)
 
 if st.button("Predict price") :    
